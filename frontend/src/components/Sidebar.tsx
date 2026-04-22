@@ -24,7 +24,7 @@ export default function Sidebar({ onNewMix }: SidebarProps) {
         <div>
           <h1 className="text-xl font-semibold tracking-tight">Playbuddy</h1>
           <p className="mt-1 text-[10px] font-medium tracking-[0.22em] text-curator-muted">
-            PREMIUM INTELLIGENCE
+            is here to help you create playlists.
           </p>
         </div>
 
