@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-curator-bg text-white font-sans antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 90% 110%, rgba(107, 138, 253, 0.15), transparent 60%),
+      radial-gradient(800px 500px at 10% -10%, rgba(107, 138, 253, 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-curator-card border border-curator-border rounded-3xl backdrop-blur-xl;
+  }
+
+  .chip {
+    @apply px-4 py-2 rounded-full text-sm text-white/70 border border-transparent
+           hover:text-white hover:border-white/10 transition-colors cursor-pointer;
+  }
+
+  .chip-active {
+    @apply text-white border-curator-accent/50 bg-curator-accent/15
+           shadow-[0_0_20px_rgba(107,138,253,0.25)];
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-white/60
+           hover:text-white hover:bg-white/5 transition-colors;
+  }
+
+  .nav-item-active {
+    @apply text-curator-accent-soft bg-white/[0.03];
+  }
+}
